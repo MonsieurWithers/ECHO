@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Connexion</title>
+	<style>
+		body {
+			background-color: #000000;
+			color: #fff;
+			font-family: 'Courier New', Courier, monospace;
+			font-size: 1.2rem;
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			background-color: #444;
+			border: 2px solid #fff;
+			box-shadow: 0 0 10px #fff;
+			margin: 10% auto;
+			max-width: 400px;
+			padding: 20px;
+			text-align: center;
+		}
+		.header {
+			align-items: center;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			margin-bottom: 10px;
+		}
+		.header h1 {
+			margin: 0;
+		}
+		.form label {
+			display: inline-block;
+			margin-bottom: 10px;
+			text-align: left;
+			width: 100%;
+		}
+		.form input[type="text"],
+		.form input[type="password"] {
+			background-color: #000;
+			border: none;
+			color: #fff;
+			font-family: 'Courier New', Courier, monospace;
+			font-size: 1.2rem;
+			margin-bottom: 20px;
+			padding: 5px;
+			width: 100%;
+		}
+		.form input[type="submit"] {
+			background-color: #000000;
+			border: 2px solid #fff;
+			color: #fff;
+			cursor: pointer;
+			font-family: 'Courier New', Courier, monospace;
+			font-size: 1.2rem;
+			padding: 10px;
+			transition: all 0.3s ease;
+			width: 100%;
+		}
+		.form input[type="submit"]:hover {
+			background-color: #fff;
+			color: #000;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1>Connexion</h1>
+		</div>
+		<form class="form" action="#">
+			<label for="id">ID :</label>
+			<input type="text" id="id" name="id" required>
+			<label for="password">Password :</label>
+			<input type="password" id="password" name="password" required>
+			<input type="submit" value="Se connecter">
+		</form>
+	</div>
+	<script>
+		const form = document.querySelector('form');
+		form.addEventListener('submit', function(event) {
+			event.preventDefault();
+			const id = document.querySelector('#id').value;
+			const password = document.querySelector('#password').value;
+			if (id === 'AERD21C' && password === 'Twinkle1968') {
+				window.location.href = 'files1.html';
+			} else if (id === 'RCRD45A' && password === 'Richard101') {
+				window.location.href = 'files2.html';
+			} else if (id === 'BHRD11B' && password === 'Seafoam87') {
+				window.location.href = 'files3.html';
+			} else if (id === 'EAIT57A' && password === 'Howlbyte69') {
+				window.location.href = 'files4.html';
+			} else {
+				alert('Identifiant ou mot de passe incorrect.');
+			}
+		});
+	</script>
+</body>
+</html>
